@@ -1,19 +1,81 @@
-<section>
-  <div>
-    <h1 class="hero__title">Complex preparation for English UPE</h1>
-    <p class="hero__text">
-      <span class="hero__text-grey">It won’t be easy.</span>
-      But you are guaranteed to get +25 points
-    </p>
+<section class="section hero">
+  <div class="container hero__container">
+    <!-- ---------------------------------------content  -->
+    <div class="hero__content">
+      <h1 class="hero__title">Complex preparation for English UPE</h1>
+      <p class="hero__text">
+        <span class="hero__text-grey">It won &#787; t be easy.</span>
+        But you are guaranteed to get
+        <span class="hero__text-orange">+25 points</span>
+      </p>
 
-    <button type="button">i want a free lesson</button>
+      <button class="button button__hero" type="button">
+        i want a free lesson
+      </button>
+    </div>
 
-    <picture>
-      <!-- <source srcset="photo-wide.jpg" media="(min-width: 600px)" /> -->
-      <!-- <img src="../images/hero/hero-descktop@1x.png" alt="people" /> -->
-    </picture>
+    <!-- ---------------------------------------image  -->
+    <div class="hero__img">
+      <picture class="hero__img-bottom">
+        <source
+          srcset="
+            ./images/hero/bottom-desc@1x.png 1x,
+            ./images/hero/bottom-desc@2x.png 2x
+          "
+          media="(min-width: 1366px)"
+          type="image/jpeg"
+        />
 
-    <!-- width: 842px;
-height: 718px; -->
+        <source
+          srcset="
+            ./images/hero/bottom-tablet@1x.png 1x,
+            ./images/hero/bottom-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+          type="image/jpeg"
+        />
+
+        <source
+          srcset="
+            ./images/hero/bottom-mobile@1x.png 1x,
+            ./images/hero/bottom-mobile@2x.png 2x
+          "
+          media="(min-width: 320px)"
+          type="image/jpeg"
+        />
+
+        <img src="./images/hero/bottom-desc@1x.png" alt="people" />
+      </picture>
+      <picture class="hero__img-top">
+        <source
+          srcset="
+            ./images/hero/top-desc@1x.png 1x,
+            ./images/hero/top-desc@2x.png 2x
+          "
+          media="(min-width: 1366px)"
+          type="image/jpeg"
+        />
+
+        <source
+          srcset="
+            ./images/hero/top-tablet@1x.png 1x,
+            ./images/hero/top-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+          type="image/jpeg"
+        />
+
+        <source
+          srcset="
+            ./images/hero/top-mobile@1x.png 1x,
+            ./images/hero/top-mobile@2x.png 2x
+          "
+          media="(min-width: 320px)"
+          type="image/jpeg"
+        />
+
+        <img src="./images/hero/bottom-desc@1x.png" alt="people" />
+      </picture>
+    </div>
   </div>
 </section>
