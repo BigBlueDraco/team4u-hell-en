@@ -1,26 +1,60 @@
+img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
 .container {
   width: 320px;
-  padding: 20px;
+  padding: 0 20px;
+  @media screen and (min-width: 730px) {
+    width: 730px;
+  }
+  @media screen and (min-width: 1366px) {
+    width: 1366px;
+    padding: 0 26px;
+  }
 }
 
 // ------------------ hero
 
 .hero {
-  background-color: aliceblue;
+  background-color: #fff;
+  padding: 30px 0 70px 0;
+  //   background-image: url(../images/sprite.svg#icon-hero-wave-bgico);
+  @media screen and (min-width: 730px) {
+    padding: 70px 0 70px 0;
+  }
+  @media screen and (min-width: 1366px) {
+    padding: 30px 0 130px 0;
+  }
 }
 .hero__container {
-  @media screen and (min-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 730px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
   @media screen and (min-width: 1366px) {
     display: flex;
   }
 }
 .hero__content {
-  @media screen and (min-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 730px) {
+    display: inline-block;
+    width: 320px;
+    margin-right: 18px;
+    padding-top: 4px;
   }
   @media screen and (min-width: 1366px) {
     width: 530px;
     height: 421px;
+    padding-top: 55px;
   }
 }
 .hero__title {
@@ -32,50 +66,54 @@
 
   margin-bottom: 8px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
     font-size: 26px;
     margin-bottom: 15px;
+    width: 320px;
   }
 
   @media screen and (min-width: 1366px) {
     font-size: 58px;
+    width: 530px;
   }
 }
 // -----------------------description
+.hero__text-grey {
+  font-weight: 500;
+  color: #b9b9b9;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+
+  @media screen and (min-width: 1366px) {
+    font-size: 20px;
+  }
+}
 
 .hero__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.57;
   letter-spacing: 0.08em;
+  margin-bottom: 50px;
+  width: 260px;
 
   color: #111518;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
+    margin-bottom: 45px;
   }
-
   @media screen and (min-width: 1366px) {
     font-weight: 700;
     font-size: 20px;
     line-height: 165%;
     align-items: center;
     letter-spacing: 0.08em;
+
+    width: 530px;
   }
 }
-.hero__text-grey {
-  font-weight: 500;
-  color: #b9b9b9;
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1366px) {
-  }
-}
-
 .hero__text-orange {
   color: #ff6b09;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
   }
 
   @media screen and (min-width: 1366px) {
@@ -85,6 +123,8 @@
 // ------------------------------button
 .button__hero {
   padding: 17px 46px 16px;
+  margin-bottom: 54px;
+
   background-color: #ff6b09;
   color: #ffffff;
 
@@ -92,11 +132,22 @@
   font-size: 12px;
   line-height: 1.28;
   letter-spacing: 0.08em;
-
   text-align: center;
   text-transform: uppercase;
 
   border: none;
+
+  @media screen and (min-width: 730px) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1366px) {
+    margin-bottom: 0;
+    padding: 27px 70px 26px;
+
+    font-size: 14px;
+    line-height: 1.13;
+    letter-spacing: 0.14em;
+  }
 }
 
 // -------------------------------image
@@ -106,7 +157,7 @@
   width: 208px;
   height: 178px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
     width: 370px;
     height: 315px;
   }
@@ -118,38 +169,49 @@
 
 .hero__img-bottom {
   position: absolute;
-  width: 100%;
-  height: auto;
 
-  top: 9.52px;
-  left: 0;
+  @media screen and (min-width: 320px) {
+    width: 208px;
+    height: 150px;
+    top: 9.52px;
+    left: 0;
+  }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
     top: 17px;
     left: 0;
+    width: 370px;
+    height: 264px;
   }
 
   @media screen and (min-width: 1366px) {
     top: 38px;
     left: 0;
+    width: 842px;
+    height: 602px;
   }
 }
+
 .hero__img-top {
-  width: 100%;
-  height: auto;
   position: absolute;
 
   @media screen and (min-width: 320px) {
     top: 0;
     left: 20.08px;
+    width: 178px;
+    height: 178px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 730px) {
     top: 0;
     left: 35px;
+    width: 316px;
+    height: 315px;
   }
   @media screen and (min-width: 1366px) {
     top: 0;
     left: 82px;
+    width: 719px;
+    height: 718px;
   }
 }
