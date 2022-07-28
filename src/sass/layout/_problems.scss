@@ -1,0 +1,35 @@
+.problems-section{
+    background-color: red;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 22%, rgba(0,0,0,1) 22%);
+}
+.problems-conteiner{
+    background-color: white;
+}
+
+/*================Заголовок============*/
+.problems-title{
+    >span{
+        color: red;
+    }
+}
+/* ==========Лічільник листу проблем==============*/
+.problems-list{
+    counter-reset: section;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+    
+    padding: 0 27px;
+}
+
+.problems-list__item{
+   >span::after{
+    counter-increment: section;                 
+    content: '0'counter(section);
+    }
+    >span::before{
+    content: "-" 
+    }
+ 
+}
