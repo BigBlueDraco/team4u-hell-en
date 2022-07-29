@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.mob-menu {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(17, 21, 24, 0.9);
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.menu-btn {
+    margin: 0;
+    padding: 0;
+    // background-color: transparent;
+    // border: none;
+
+    width: 21px;
+    height: 12px;
+}
+
+.navigation {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+
+    padding-top: 48px;
+    padding-left: 20px;
+}
+
+.navigation__link--current {
+    color: var(--accent-color);
+}
