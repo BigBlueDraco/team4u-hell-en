@@ -136,31 +136,13 @@ body {
 
 // ------------------------------button
 .button__hero {
-  padding: 17px 46px 16px;
   margin-bottom: 54px;
 
-  background-color: #ff6b09;
-  color: #ffffff;
-
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.28;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-
-  border: none;
-
-  @media screen and (min-widt768768px) {
+  @media screen and (min-widt: 768px) {
     margin-bottom: 0;
   }
   @media screen and (min-width: 1440px) {
     margin-bottom: 0;
-    padding: 27px 70px 26px;
-
-    font-size: 14px;
-    line-height: 1.13;
-    letter-spacing: 0.14em;
   }
 }
 
