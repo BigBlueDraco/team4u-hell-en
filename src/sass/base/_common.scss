@@ -4,7 +4,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--pimary-text-color);
-  background: var(--secondary-background-color);
+  background: var(--pimary-background-color);
 }
 
 .container {
@@ -26,11 +26,22 @@ body {
 
 .section {
   padding-bottom: 70px;
+  @media screen and (min-width: 1366px) {
+    padding: 0 130px;
+  }
 }
 .title {
-  color: var(--tittle-text-color);
+  color: var(--title-text-color);
   font-weight: 800;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.3;
   letter-spacing: 0.03em;
+
+  @include mq(tab) {
+    font-size: 26px;
+  }
+
+  @include mq(desk) {
+    font-size: 46px;
+  }
 }
