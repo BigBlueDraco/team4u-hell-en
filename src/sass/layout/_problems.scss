@@ -1,7 +1,15 @@
 .problems-section{
     padding-top: 20px;
     background-color: red;
-    background: linear-gradient(0deg, var(--secondary-background-color) 22%, var(--third-background-color) 22%);
+    background: linear-gradient(0deg, var(--secondary-background-color) 28%, var(--third-background-color) 28%);
+    @media screen and (min-width: 768px){
+        padding-top: 55px;
+        background: linear-gradient(0deg, var(--secondary-background-color) 38%, var(--third-background-color) 38%);
+    }
+    @media screen and (min-width: 1366px){
+        padding-top: 100px
+    }
+    
 }
 .problems-container{
 }
@@ -10,6 +18,18 @@
 .problems-title{
     color: var(--secondary-text-color);
     margin-bottom: 25px;
+
+    @media screen and (min-width: 768px){
+        width: 450px;
+        margin-bottom: 30px;
+
+        font-size: 24px;
+        line-height: 1.30;
+        letter-spacing: 0.03em;
+    }
+    @media screen and (min-width: 1366px){
+        margin-bottom: 68px;
+    }
     >span{
         color: var(--accent-color);
     }
@@ -28,13 +48,34 @@
     align-items: flex-start;  
     gap: 15px;
 
+    @media screen and (min-width: 768px) {
+        padding: 28px 90px;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 68px;
+    }
+    @media screen and (min-width: 1366px){
+        row-gap: 30px;
+        column-gap: 40px;
+    }
+
 }
 
 .problems-list__item{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.43;
-    color: var(--tittle-text-color);
+    color: var(--title-text-color);
+    flex-shrink: 1;
+    @media screen and (min-width: 768px){
+        flex-basis: 220px;
+    }
+    @media screen and (min-width: 1366px){
+        flex-basis: 336px;
+    }
+    
 }
 
 /* ==========Лічільник листу проблем==============*/
