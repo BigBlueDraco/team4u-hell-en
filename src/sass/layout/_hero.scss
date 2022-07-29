@@ -43,12 +43,8 @@ body {
   align-items: center;
 
   @include mq(tab) {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
-  }
-  @include mq(desk) {
-    display: flex;
   }
 }
 .hero__content {
@@ -123,8 +119,6 @@ body {
 }
 .hero__text-orange {
   color: var(--accent-color);
-  @include mq(tab) {
-  }
 }
 
 // ------------------------------button
@@ -132,9 +126,6 @@ body {
   margin-bottom: 54px;
 
   @include mq(tab) {
-    margin-bottom: 0;
-  }
-  @include mq(desk) {
     margin-bottom: 0;
   }
 }
