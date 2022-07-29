@@ -10,6 +10,7 @@
     @media screen and (min-width: 1366px){
         padding-top: 100px;
         background: linear-gradient(180deg, var(--third-background-color) 72%, var(--secondary-background-color) 72%);
+        background-repeat:no-repeat!important;
     }
     
 }
@@ -115,18 +116,17 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    z-index: 0;
+    z-index: 1;
     margin: 0 auto;
-    background: red;
+    background: transparent;
     display: none;
     @media screen and (min-width: 1366px){
         display: block;
-         width: 1680px;
+        width: 100%;
+        max-width: 1680px;
         height: 72%;
+        background-image: url(../images/problems/problems-bg-fire.svg);
+        background-position: bottom right;
+        background-repeat:no-repeat!important;
     }
-}
-.problems__bg-icon{
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
