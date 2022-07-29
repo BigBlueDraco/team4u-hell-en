@@ -1,3 +1,43 @@
 <section class="section">
-  <div class="about container"></div>
+  <div class="about container">
+    <h2 class="about__title">Teacher</h2>
+    <picture class="about__picture">
+      <!-- desctop -->
+      <source
+        media="(min-width: 1366px)"
+        srcset="
+          ./images/teacher/teacher-descktop@1x.jpg 1x,
+          ./images/teacher/teacher-descktop@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <!-- tablet screen -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/teacher/teacher-tablet@1x.jpg 1x,
+          ./images/teacher/teacher-tablet@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <!-- mobile screen -->
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/teacher/teacher-mobile@1x.jpg 1x,
+          ./images/teacher/teacher-mobile@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+
+      <img
+        class="team-list__img"
+        src="./images/teacher/teacher-mobile@1x.jpg"
+        alt="Photo of teacher Elena Moreva"
+        width="530"
+        height="668"
+        loading="lazy"
+      />
+    </picture>
+  </div>
 </section>
