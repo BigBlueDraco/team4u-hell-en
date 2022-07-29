@@ -13,7 +13,7 @@
 
   border: none;
 
-  @media screen and (min-width: 1440px) {
+  @include mq(desk) {
     padding: 27px 70px 26px;
 
     font-size: 14px;

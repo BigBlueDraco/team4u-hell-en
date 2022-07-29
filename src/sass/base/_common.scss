@@ -12,13 +12,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  @media screen and (min-width: 320px) {
+  @include mq(mob) {
     width: 320px;
   }
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     width: 728px;
   }
-  @media screen and (min-width: 1440px) {
+  @include mq(desk) {
     width: 1366px;
     padding: 0 26px;
   }
