@@ -1,35 +1,59 @@
 .problems-section{
+    padding-top: 20px;
     background-color: red;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 22%, rgba(0,0,0,1) 22%);
+    background: linear-gradient(0deg, var(--secondary-background-color) 22%, var(--third-background-color) 22%);
 }
 .problems-container{
-    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 280px;
 }
 
 /*================Заголовок============*/
 .problems-title{
+    color: var(--secondary-text-color);
+    margin-bottom: 25px;
     >span{
-        color: red;
+        color: var(--accent-color);
     }
 }
-/* ==========Лічільник листу проблем==============*/
+
 .problems-list{
-    counter-reset: section;    
+    
+    background-color: var(--pimary-background-color);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    padding: 20px 27px;
+
+    counter-reset: problrms-list;    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;  
-    
-    padding: 0 27px;
+    gap: 15px;
+
 }
 
 .problems-list__item{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--tittle-text-color);
+}
+
+/* ==========Лічільник листу проблем==============*/
+.problems-list__item{
+    >span{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+      color: var(--accent-color) ;  
+    }
    >span::after{
-    counter-increment: section;                 
-    content: '0'counter(section);
+    counter-increment: problrms-list;                 
+    content: '0'counter(problrms-list);
     }
     >span::before{
-    content: "-" 
+    content: "\2014" 
     }
- 
 }
