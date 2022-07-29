@@ -1,0 +1,68 @@
+.about__title {
+  margin-bottom: 30px;
+}
+
+.about__img {
+  margin-bottom: 20px;
+}
+
+.about__name {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid var(--pimary-text-color);
+}
+
+.about__list {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.about__item {
+  margin-bottom: 15px;
+
+  &:not(:last-child)::before {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 14px;
+    background-size: contain;
+    margin-right: 9px;
+    background-image: url('../images/teacher/about-check.svg');
+  }
+
+  &:last-child::before {
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-size: contain;
+    margin-right: 9px;
+    background-image: url('../images/teacher/about-rectangle.svg');
+  }
+
+  &.about__item--empty {
+    color: transparent;
+  }
+}
+
+.text-about {
+  line-height: 1.67;
+}
+
+.text-about__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.text-about__item:last-child {
+  margin-bottom: 20px;
+}
+
+.about__link {
+  line-height: 1.67;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
