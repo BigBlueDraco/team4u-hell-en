@@ -1,4 +1,5 @@
 .problems-section{
+    position: relative;
     padding-top: 20px;
     background-color: red;
     background: linear-gradient(0deg, var(--secondary-background-color) 28%, var(--third-background-color) 28%);
@@ -7,7 +8,8 @@
         background: linear-gradient(0deg, var(--secondary-background-color) 38%, var(--third-background-color) 38%);
     }
     @media screen and (min-width: 1366px){
-        padding-top: 100px
+        padding-top: 100px;
+        background: linear-gradient(0deg, var(--secondary-background-color) 28%, var(--third-background-color) 28%);
     }
     
 }
@@ -57,6 +59,7 @@
         column-gap: 68px;
     }
     @media screen and (min-width: 1366px){
+        padding: 67px 113px;
         row-gap: 30px;
         column-gap: 40px;
     }
@@ -73,7 +76,7 @@
         flex-basis: 220px;
     }
     @media screen and (min-width: 1366px){
-        flex-basis: 336px;
+        flex-basis: 287px;
     }
     
 }
@@ -94,4 +97,16 @@
     >span::before{
     content: "\2014" 
     }
+}
+/*================Фононва іконка=================*/
+.problems__icon-canv{
+    position: relative;
+    margin: 0 auto;
+    background: red;
+    max-width: 1680px;
+}
+.problems__bg-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
