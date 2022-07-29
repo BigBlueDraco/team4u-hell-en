@@ -3,11 +3,11 @@
     padding-top: 20px;
     background-color: red;
     background: linear-gradient(180deg,var(--third-background-color) 78.42%, var(--secondary-background-color) 78.42%);
-    @media screen and (min-width: 768px){
+    @include mq(tab){
         padding-top: 55px;
         background: linear-gradient(180deg, var(--third-background-color) 70.70%, var(--secondary-background-color) 70.70%);
     }
-    @media screen and (min-width: 1366px){
+    @include mq(desk){
         padding-top: 100px;
         background: linear-gradient(180deg, var(--third-background-color) 72%, var(--secondary-background-color) 72%);
         background-repeat:no-repeat!important;
@@ -24,7 +24,7 @@
     color: var(--secondary-text-color);
     margin-bottom: 25px;
 
-    @media screen and (min-width: 768px){
+    @include mq(tab){
         width: 450px;
         margin-bottom: 30px;
 
@@ -32,7 +32,7 @@
         line-height: 1.30;
         letter-spacing: 0.03em;
     }
-    @media screen and (min-width: 1366px){
+    @include mq(desk){
         width: 860px;
         margin-bottom: 68px;
         font-weight: 800;
@@ -56,7 +56,7 @@
     align-items: flex-start;  
     gap: 15px;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
         padding: 28px 90px;
         justify-content: space-between;
         flex-direction: row;
@@ -64,7 +64,7 @@
         row-gap: 20px;
         column-gap: 68px;
     }
-    @media screen and (min-width: 1366px){
+    @include mq(desk){
         padding: 67px 113px;
         row-gap: 30px;
         column-gap: 40px;
@@ -84,10 +84,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 5px;
-    @media screen and (min-width: 768px){
+    @include mq(tab){
         flex-basis: 220px;
     }
-    @media screen and (min-width: 1366px){
+    @include mq(desk){
         flex-basis: 287px;
     }
     
@@ -120,7 +120,7 @@
     margin: 0 auto;
     background: transparent;
     display: none;
-    @media screen and (min-width: 1366px){
+    @include mq(desk){
         display: block;
         width: 100%;
         max-width: 1680px;
