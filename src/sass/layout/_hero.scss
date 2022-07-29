@@ -1,43 +1,57 @@
-img {
-  height: auto;
-  width: 100%;
-  display: block;
-}
-.container {
-  width: 320px;
-  padding: 0 20px;
-  @media screen and (min-width: 730px) {
-    width: 730px;
-  }
-  @media screen and (min-width: 1366px) {
-    width: 1366px;
-    padding: 0 26px;
-  }
-}
+// ------------------ bg image
+body {
+  background-image: url(../images/hero/wave-bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% -70px;
 
+  // --------------responsive adaptive for bg
+  @media screen and (min-width: 500px) {
+    background-position: 40% -70px;
+  }
+  @media screen and (min-width: 768px) {
+    background-position: 0 0;
+    background-image: url(../images/hero/wave-bg.svg);
+    background-size: 100% auto;
+  }
+  @media screen and (min-width: 800px) {
+    background-position: 10% 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    background-position: 0 0;
+  }
+  @media screen and (min-width: 1600px) {
+    background-position: 0 100%;
+  }
+}
 // ------------------ hero
-
 .hero {
-  background-color: #fff;
   padding: 30px 0 70px 0;
-  //   background-image: url(../images/sprite.svg#icon-hero-wave-bgico);
-  @media screen and (min-width: 730px) {
+  background-color: transparent;
+
+  @media screen and (min-width: 320px) {
+  }
+
+  @media screen and (min-width: 768px) {
     padding: 70px 0 70px 0;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     padding: 30px 0 130px 0;
   }
 }
+
 .hero__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 320px) {
+  }
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
   }
 }
@@ -45,13 +59,13 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     display: inline-block;
     width: 320px;
     margin-right: 18px;
     padding-top: 4px;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     width: 530px;
     height: 421px;
     padding-top: 55px;
@@ -66,13 +80,13 @@ img {
 
   margin-bottom: 8px;
 
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     font-size: 26px;
     margin-bottom: 15px;
     width: 320px;
   }
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     font-size: 58px;
     width: 530px;
   }
@@ -84,7 +98,7 @@ img {
   line-height: 22px;
   letter-spacing: 0.08em;
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     font-size: 20px;
   }
 }
@@ -98,10 +112,10 @@ img {
   width: 260px;
 
   color: #111518;
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 45px;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     font-weight: 700;
     font-size: 20px;
     line-height: 165%;
@@ -113,10 +127,10 @@ img {
 }
 .hero__text-orange {
   color: #ff6b09;
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
   }
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
   }
 }
 
@@ -137,10 +151,10 @@ img {
 
   border: none;
 
-  @media screen and (min-width: 730px) {
+  @media screen and (min-widt768768px) {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 0;
     padding: 27px 70px 26px;
 
@@ -157,11 +171,11 @@ img {
   width: 208px;
   height: 178px;
 
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     width: 370px;
     height: 315px;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     width: 842px;
     height: 718px;
   }
@@ -169,22 +183,19 @@ img {
 
 .hero__img-bottom {
   position: absolute;
+  width: 208px;
+  height: 150px;
+  top: 9.52px;
+  left: 0;
 
-  @media screen and (min-width: 320px) {
-    width: 208px;
-    height: 150px;
-    top: 9.52px;
-    left: 0;
-  }
-
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     top: 17px;
     left: 0;
     width: 370px;
     height: 264px;
   }
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     top: 38px;
     left: 0;
     width: 842px;
@@ -194,21 +205,18 @@ img {
 
 .hero__img-top {
   position: absolute;
+  top: 0;
+  left: 20.08px;
+  width: 178px;
+  height: 178px;
 
-  @media screen and (min-width: 320px) {
-    top: 0;
-    left: 20.08px;
-    width: 178px;
-    height: 178px;
-  }
-
-  @media screen and (min-width: 730px) {
+  @media screen and (min-width: 768px) {
     top: 0;
     left: 35px;
     width: 316px;
     height: 315px;
   }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1440px) {
     top: 0;
     left: 82px;
     width: 719px;
