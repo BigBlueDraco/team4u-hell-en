@@ -31,6 +31,9 @@ body {
 
 .section {
   padding-bottom: 70px;
+  @media screen and (min-width: 1366px) {
+    padding: 0 130px;
+  }
 }
 .title {
   color: var(--tittle-text-color);
