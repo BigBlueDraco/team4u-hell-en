@@ -1,7 +1,7 @@
 .button {
-  padding: 17px 46px 16px;
+  padding: 17px 10px 16px;
   min-width: 260px;
-  max-height: 48px;
+  height: 48px;
 
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
@@ -16,9 +16,9 @@
   border: none;
 
   @include mq(desk) {
-    padding: 27px 70px 26px;
+    padding: 27px 10px 26px;
     min-width: 354px;
-    max-height: 70px;
+    height: 70px;
 
     font-size: 14px;
     line-height: 1.13;
