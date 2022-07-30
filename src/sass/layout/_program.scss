@@ -61,7 +61,7 @@
             content: '';
             position: absolute;
             left: 0;
-            bottom: 14px;
+            bottom: -183px;
 
             display: block;
             width: 672px;
@@ -110,6 +110,19 @@
         display: flex;
         margin-left: 0;
         gap: 46px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 238px;
+            left: 0;
+            transform: translateY(-40px);
+    
+            display: inline-block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--pimary-background-color);
+        }
     }
 }
 
