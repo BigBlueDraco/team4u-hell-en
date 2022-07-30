@@ -1,23 +1,20 @@
 :root {
-    
-    /* colors */
+  /* colors */
 
+  --font-family-main: 'Montserrat', sans-serif;
+  --pimary-text-color: #b9b9b9;
+  --secondary-text-color: #ffffff;
+  --third-text-color: #3d3d3d;
+  --title-text-color: #111518;
+  --accent-color: #ff6b09;
 
-    --font-family-main: 'Montserrat', sans-serif;
-    --pimary-text-color: #B9B9B9;
-    --secondary-text-color: #ffffff; 
-    --third-text-color: #3D3D3D;
-    --title-text-color: #111518; 
-    --accent-color: #FF6B09;
-    
-    --pimary-background-color: #fff;
-    --secondary-background-color: #E5E5E5;
-    --third-background-color: #111518;
-    --fourth-background-color: #F1F1F1; // для секції "we guarantee"
-    --fifth-background-color: #3D3D3D; // для вогню
+  --pimary-background-color: #fff;
+  --secondary-background-color: #e5e5e5;
+  --third-background-color: #111518;
+  --fourth-background-color: #f1f1f1; // для секції "we guarantee"
+  --fifth-background-color: #3d3d3d; // для вогню
 
+  /* animation */
 
-    /* animation */
-
-    --shift: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shift: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

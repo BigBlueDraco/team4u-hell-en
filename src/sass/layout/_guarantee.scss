@@ -1,45 +1,103 @@
-.guarantee__list {
-  list-style: none;
+.guarantee__container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
+.guarantee__title {
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+
+.guarantee__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 45px 20px;
+  width: 100%;
+
+  background: var(--fourth-background-color);
+
+  @include mq(mob) {
+  }
+  @include mq(tab) {
+    padding: 30px 65px;
+    width: 100%;
+    gap: 20px;
+  }
+  @include mq(desk) {
+    padding: 50px 112px;
+  }
+}
+
 .guarantee__item {
   position: relative;
-  padding: 20px 0 20px 40px;
+  padding: 0px 0 0px 35px;
 
+  font-size: 12px;
+  line-height: 1.66;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
 
-  cursor: pointer;
   color: var(--fifth-background-color);
+
+  // ----------------------псевдо элементы
+  &:before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 30px;
+
+    background: url('../images/campfire.svg');
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    content: '';
+    display: inline;
+    width: 1px;
+    height: 68px;
+    position: absolute;
+    bottom: -12px;
+
+    top: 36px;
+    left: 10px;
+
+    border-left: 1px dashed var(--pimary-text-color);
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+
+  // ----------------------адаптив
+  @include mq(tab) {
+    padding: 0px 0 0px 39px;
+    &::after {
+      height: 30px;
+    }
+  }
+
+  @include mq(desk) {
+    padding: 0px 0 0px 52px;
+    font-size: 20px;
+    line-height: 1.4;
+    &::after {
+      height: 40px;
+    }
+  }
 }
-.guarantee__item:before {
-  content: '';
+
+.guarantee__item-icon {
+  margin-right: 30px;
+
   width: 22px;
   height: 30px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  background-image: url('../images/sprite.svg#icon-hero-helloen-fire');
-
-  transition: 0.3s ease-in-out;
 }
-.guarantee__item:after {
-  content: '';
-  display: inline;
-  width: 1px;
-  position: absolute;
-  bottom: -12px;
 
-  left: 3px;
-  top: 48px;
-
-  border-left: 1px dashed var(--pimary-text-color);
-}
-.guarantee__item:hover:before {
-  box-shadow: 0 0 0 10px rgba(255, 107, 9, 0.26);
-}
-.guarantee__item:last-child:after {
-  content: none;
+.guarantee__item-text--color {
+  color: var(--accent-color);
 }
