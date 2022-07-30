@@ -4,7 +4,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--pimary-text-color);
-  background: var(--pimary-background-color);
+  background: var(--primary-background-color);
 }
 
 .container {
@@ -44,5 +44,20 @@ body {
 
   @include mq(desk) {
     font-size: 46px;
+  }
+}
+
+.title--dark-theme{
+  color: var(--secondary-text-color);
+  margin-bottom: 25px;
+  @include mq(tab){
+      margin-bottom: 30px;
+      font-size: 24px;
+  }
+  @include mq(desk){
+      margin-bottom: 68px;
+  }
+  &__accent{
+      color: var(--accent-color);
   }
 }
