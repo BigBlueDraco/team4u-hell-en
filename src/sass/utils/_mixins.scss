@@ -49,3 +49,10 @@
     }
   }
 }
+
+@mixin fonts($weight, $size, $lh, $ls) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
