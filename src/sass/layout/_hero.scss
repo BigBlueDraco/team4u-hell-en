@@ -5,7 +5,7 @@
 
   background-image: url(../images/hero/wave-bg-mobile.svg);
   background-repeat: no-repeat;
-  background-position: 10% -70px;
+  background-position: 50% -70px;
   overflow: hidden;
 
   @include mq(tab) {
@@ -52,7 +52,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1 solid red;
 
   @include mq(tab) {
     flex-direction: row;
