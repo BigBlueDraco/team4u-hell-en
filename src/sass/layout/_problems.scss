@@ -1,4 +1,4 @@
-.problems-section{
+.section--problems{
     position: relative;
     padding-top: 20px;
     background-color: var(--third-background-color);
@@ -14,13 +14,13 @@
     }
     
 }
-.problems-container{
+.problems{
     position: relative;
     z-index: 1;
 }
 
 /*================Заголовок============*/
-.problems-title{
+.title--problems{
     color: var(--secondary-text-color);
     margin-bottom: 25px;
 
@@ -38,7 +38,7 @@
         font-weight: 800;
         font-size: 46px;
     }
-    >span{
+    &__accent{
         color: var(--accent-color);
     }
 }
@@ -55,6 +55,14 @@
     justify-content: center;
     align-items: flex-start;  
     gap: 15px;
+
+    &__decor::after{
+        counter-increment: problrms-list;                 
+        content: '0'counter(problrms-list);
+    }
+    &__decor::before{
+        content: "\2014" 
+    }
 
     @include mq(tab) {
         padding: 28px 90px;
@@ -101,13 +109,6 @@
         line-height: 1.2;
         letter-spacing: 0.08em;
       color: var(--accent-color) ;  
-    }
-   >span::after{
-    counter-increment: problrms-list;                 
-    content: '0'counter(problrms-list);
-    }
-    >span::before{
-    content: "\2014" 
     }
 }
 /*================Фононва іконка=================*/
