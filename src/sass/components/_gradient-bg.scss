@@ -1,0 +1,13 @@
+.section--gradient{
+    background-color: var(--third-background-color);
+    background: linear-gradient(180deg,var(--third-background-color) 78.42%, var(--primary-background-color) 78.42%);
+    @include mq(tab){
+        padding-top: 55px;
+        background: linear-gradient(180deg, var(--third-background-color) 70.70%, var(--primary-background-color) 70.70%);
+    }
+    @include mq(desk){
+        padding-top: 100px;
+        background: linear-gradient(180deg, var(--third-background-color) 72%, var(--primary-background-color) 72%);
+        background-repeat:no-repeat;
+    }
+}
