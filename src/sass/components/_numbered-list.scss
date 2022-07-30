@@ -1,6 +1,5 @@
 .numbered-list{
-    
-    background-color: var(--primary-background-color);
+    background-color: var(--secondary-background-color);
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     padding: 20px 27px;
 
@@ -10,13 +9,10 @@
     justify-content: center;
     align-items: flex-start;  
     gap: 15px;
-
+    
     &__decor::after{
         counter-increment: problems-list;                 
-        content: '0'counter(problems-list);
-    }
-    &__decor::before{
-        content: "\2014" 
+        content:  "\2014" '0'counter(problems-list);
     }
 
     @include mq(tab) {
@@ -52,6 +48,8 @@
     }
     @include mq(desk){
         flex-basis: 287px;
+        font-size: 20px;
+        line-height: 1.4;
     }    
 }
 
@@ -61,6 +59,11 @@
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.08em;
-      color: var(--accent-color) ;  
+        color: var(--accent-color) ;  
+
+        
+        @include mq(desk){
+            line-height: 1.64;
+        }    
     }
 }
