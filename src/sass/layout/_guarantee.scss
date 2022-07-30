@@ -17,7 +17,8 @@
   flex-direction: column;
   gap: 25px;
   padding: 45px 20px;
-  width: 100%;
+  min-width: 320px;
+  letter-spacing: 0;
 
   background: var(--fourth-background-color);
 
