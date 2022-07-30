@@ -21,10 +21,8 @@
 
             background-image: url(../images/program/program-mobile@1x.jpg);
 
-            // mobile retina screen
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
+            
+            @include mq(retina) {
                 background-image: url(../images/program/program-mobile@2x.jpg);
             }
 
@@ -44,10 +42,8 @@
         height: 273px;
 
         background-image: url(../images/program/program-tablet@1x.jpg);
-        // tablet retina screen
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
+        
+        @include mq(retina) {
             background-image: url(../images/program/program-tablet@2x.jpg);
         }
         background-size: contain;
@@ -71,10 +67,8 @@
 
             background-image: url(../images/program/program-descktop@1x.jpg);
 
-            // desktop retina screen
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
+            
+            @include mq(retina) {
                 background-image: url(../images/program/program-descktop@2x.jpg);
             }
 
