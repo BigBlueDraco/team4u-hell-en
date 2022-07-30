@@ -46,3 +46,18 @@ body {
     font-size: 46px;
   }
 }
+
+.title--dark-theme{
+  color: var(--secondary-text-color);
+  margin-bottom: 25px;
+  @include mq(tab){
+      margin-bottom: 30px;
+      font-size: 24px;
+  }
+  @include mq(desk){
+      margin-bottom: 68px;
+  }
+  &__accent{
+      color: var(--accent-color);
+  }
+}
