@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://BigBlueDraco.github.io/Team4U-HellEN/",
+  "homepage": "https://BigBlueDraco.github.io/team4u-hell-en/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Team4U-HellEN/"
+    "build": "parcel build src/*.html --public-url /team4u-hell-en/"
   },
   "repository": {
     "type": "git",

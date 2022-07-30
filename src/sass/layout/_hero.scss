@@ -1,33 +1,31 @@
 // ------------------ hero
-
 .hero {
   padding: 30px 0 70px 0;
+  background-color: transparent;
+
+  @include mq(tab) {
+    padding: 70px 0 70px 0;
+  }
+  @include mq(desk) {
+    padding: 30px 0 130px 0;
+  }
 
   background-image: url(../images/hero/wave-bg-mobile.svg);
   background-repeat: no-repeat;
   background-position: 10% -70px;
-  overflow: hidden;
 
+  // --------------responsive adaptive for bg
+  @include mq(mob) {
+    background-position: 50% -70px;
+  }
   @include mq(tab) {
-    padding: 70px 0 70px 0;
-
-    background-position: 0 -20px;
+    background-position: 0 0;
     background-image: url(../images/hero/wave-bg.svg);
     background-size: 100%;
   }
 
-  @media screen and (min-width: 900px) {
-    background-position: 0 160%;
-  }
   @media screen and (min-width: 1000px) {
-    background-position: 0 130%;
-  }
-  @media screen and (min-width: 1100px) {
     background-position: 0 100%;
-  }
-
-  @include mq(desk) {
-    padding: 30px 0 130px 0;
   }
 
   @media screen and (min-width: 1366px) {
@@ -40,7 +38,7 @@
   }
   @media screen and (min-width: 1800px) {
     background-position: 0 100%;
-    background-position: 0 -200px;
+    background-position: 0 -240px;
   }
   @media screen and (min-width: 1920px) {
     background-position: 0 100%;
@@ -52,7 +50,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1 solid red;
 
   @include mq(tab) {
     flex-direction: row;
