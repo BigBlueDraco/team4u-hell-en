@@ -1,27 +1,38 @@
 .header {
     display: flex;
-    // align-items: center;
+    align-items: center;
     // justify-content: space-between;
     padding-top: 30px;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
+
 }
 
 .logo {
     display: inline-flex;
+    color: var(--title-text-color);
+}
+
+.logo__icon {
+    fill: currentColor;
 }
 
 .mob-menu {
-    // display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    display: none;
 
-    background-color: rgba(17, 21, 24, 0.9);
+    &.is-open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
+        background-color: rgba(17, 21, 24, 0.9);
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .menu-btn {
@@ -30,12 +41,41 @@
     background-color: transparent;
     border: none;
 
-    // &.is-open {
-        // position: fixed;
-        // top: 48px;
-        // right: 31px;
-        // z-index: 1000;
-    // }
+    &.is-open {
+        position: fixed;
+        top: 37px;
+        right: 20px;
+        z-index: 1000;
+    }
+}
+
+.menu-btn__icon-menu {
+    stroke: #000;
+}
+
+.menu-btn__icon-close {
+    opacity: 0;
+
+    .menu-btn.is-open & {
+        position: absolute;
+        top: 37;
+        right: 20px;
+        z-index: 10;
+        opacity: 1;
+    }
+}
+
+.mob-menu__logo {
+    display: none;
+
+    .mob-menu.is-open & {
+        position: absolute;
+        display: block;
+        top: 30px;
+        left: 20px;
+        z-index: 200;
+        color: var(--secondary-text-color);
+    }
 }
 
 .navigation {
@@ -56,18 +96,11 @@
     }
 }
 
-.menu-btn__icon-menu {
-    stroke: #000;
-}
+.mob-menu__button {
+    display: block;
+    margin: 50px auto 0;
+    padding: 10px;
 
-.menu-btn__icon-close {
-    opacity: 0;
-
-    .menu-btn.is-open & {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 10;
-        opacity: 1;
-    }
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
 }
