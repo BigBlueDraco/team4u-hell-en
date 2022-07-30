@@ -1,8 +1,88 @@
 .program {
-    background-color: var(--third-background-color);
     position: relative;
-    padding-bottom: 145px;
-    background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(../../images/program/program-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: right -10px bottom 50px;
+
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--third-background-color);
+
+    @include mq(mob-only) {
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -97px;
+
+            display: block;
+            width: 120px;
+            height: 137px;
+
+            background-image: url(../images/program/program-mobile@1x.jpg);
+
+            // mobile retina screen
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/program/program-mobile@2x.jpg);
+            }
+
+            background-size: contain;
+        }
+    }
+
+    @include mq(tab-only) {
+        &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -102px;
+
+        display: block;
+        width: 374px;
+        height: 273px;
+
+        background-image: url(../images/program/program-tablet@1x.jpg);
+        // tablet retina screen
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/program/program-tablet@2x.jpg);
+        }
+        background-size: contain;
+        }
+    }
+    
+    @include mq(desk) {
+        width: 1680px;
+        padding-top: 120px;
+        padding-bottom: 326px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 14px;
+
+            display: block;
+            width: 672px;
+            height: 502px;
+
+            background-image: url(../images/program/program-descktop@1x.jpg);
+
+            // desktop retina screen
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/program/program-descktop@2x.jpg);
+            }
+
+            background-size: contain;
+        }
+    }
+}
+
+.program__title {
+    
 }
