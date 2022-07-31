@@ -1,8 +1,8 @@
 .program {
     position: relative;
 
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 62px;
+    padding-bottom: 137px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -36,7 +36,7 @@
         content: '';
         position: absolute;
         right: 0;
-        bottom: -102px;
+        bottom: 35px;
 
         display: block;
         width: 374px;
@@ -239,6 +239,7 @@
 }
 
 .program__subject{
+    padding: 10px 0px;
     margin-bottom: 5px;
     
     font-weight: 700;
