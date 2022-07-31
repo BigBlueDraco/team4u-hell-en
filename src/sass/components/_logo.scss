@@ -1,0 +1,13 @@
+.logo {
+    display: inline-flex;
+    color: var(--title-text-color);
+}
+
+.logo__icon {
+    fill: currentColor;
+    
+    @include mq(tab) {
+        width: 128px;
+        height: 45px;
+    }
+}

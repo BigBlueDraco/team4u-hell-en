@@ -1,106 +1,59 @@
 .header {
+    background-color: var(--secondary-background-color);
+}
+
+.header__container {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     padding-top: 30px;
-    // padding-bottom: 30px;
 
+    @include mq(tab) {
+        padding-top: 42px;
+    }
 }
 
-.logo {
-    display: inline-flex;
-    color: var(--title-text-color);
-}
-
-.logo__icon {
-    fill: currentColor;
-}
-
-.mob-menu {
+.header__button {
     display: none;
 
-    &.is-open {
+    @include mq(tab) {
+        margin-left: 239px;
         display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 100;
+        padding: 10px;
+        border: 2px solid var(--accent-color);
 
-        background-color: rgba(17, 21, 24, 0.9);
+        color: var(--accent-color);
+        background-color: transparent;
+    }
 
-        padding-top: 30px;
-        padding-bottom: 30px;
+    @include mq(desk) {
+        margin-left: 60px;
     }
 }
 
-.menu-btn {
-    margin-left: auto;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-
-    &.is-open {
-        position: fixed;
-        top: 37px;
-        right: 20px;
-        z-index: 1000;
-    }
-}
-
-.menu-btn__icon-menu {
-    stroke: #000;
-}
-
-.menu-btn__icon-close {
-    opacity: 0;
-
-    .menu-btn.is-open & {
-        position: absolute;
-        top: 37;
-        right: 20px;
-        z-index: 10;
-        opacity: 1;
-    }
-}
-
-.mob-menu__logo {
-    display: none;
-
-    .mob-menu.is-open & {
-        position: absolute;
-        display: block;
-        top: 30px;
-        left: 20px;
-        z-index: 200;
-        color: var(--secondary-text-color);
-    }
+.header__navigation {
+    margin-left: 144px;
 }
 
 .navigation {
-    padding-top: 48px;
-    padding-left: 20px;
-}
+    display: none;
 
-.navigation__link {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-
-    color: var(--secondary-text-color);
-
-    &--current {
-        color: var(--accent-color);
+    @include mq(desk) {
+        display: flex;
+        gap: 40px;
     }
 }
 
-.mob-menu__button {
-    display: block;
-    margin: 50px auto 0;
-    padding: 10px;
+.navigation__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    
+    color: var(--pimary-text-color);
+    transition: color var(--shift);
 
-    border: 2px solid var(--accent-color);
-    background-color: transparent;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
