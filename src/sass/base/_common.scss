@@ -4,7 +4,24 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--pimary-text-color);
-  background: var(--primary-background-color);
+  background: var(--secondary-background-color);
+}
+
+#page.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  padding-top: 90px;
+
+  @include mq(tab) {
+    padding-top: 158px;
+  }
+
+  @include mq(tab) {
+    padding-top: 130px;
+  }
+
 }
 
 .container {
