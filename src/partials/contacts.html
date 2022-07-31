@@ -9,12 +9,41 @@
       Leave a request for participation in a
       <span class="contacts__accent">free lesson</span>.
     </h3>
-    <h3 class="contacts__descr">
+    <h3 class="contacts__descr contacts__descr--last">
       A consultant will contact you and answer your questions
     </h3>
 
-    <button class="contacts__button button" type="button">
-      i want a free lesson
-    </button>
+    <form class="form" autocomplete="off">
+      <div class="form__field">
+        <label class="form__label" for="name"></label>
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name*"
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space."
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="number"></label>
+        <input
+          class="form__input form__input--last"
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Phone*"
+          required
+          pattern="^[0-9]+$"
+          title="The phone number must contain only numbers."
+        />
+      </div>
+
+      <button class="contacts__button button" type="submit">
+        i want a free lesson
+      </button>
+    </form>
   </div>
 </section>
