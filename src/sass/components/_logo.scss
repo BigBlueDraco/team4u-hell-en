@@ -1,6 +1,11 @@
 .logo {
     display: inline-flex;
     color: var(--title-text-color);
+    transition: color var(--shift);
+
+    .header--no-transparency & {
+        color: var(--secondary-text-color);
+    }
 }
 
 .logo__icon {

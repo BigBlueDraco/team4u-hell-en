@@ -7,6 +7,23 @@ body {
   background: var(--primary-background-color);
 }
 
+#page.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  padding-top: 90px;
+
+  @include mq(tab) {
+    padding-top: 158px;
+  }
+
+  @include mq(tab) {
+    padding-top: 130px;
+  }
+
+}
+
 .container {
   padding: 0 20px;
   margin-left: auto;

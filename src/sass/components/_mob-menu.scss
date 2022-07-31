@@ -5,9 +5,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 500;
-        
-        background-color: rgba(17, 21, 24, 0.9);
+        z-index: 800;
         
         padding-top: 30px;
         padding-bottom: 30px;
@@ -15,13 +13,21 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        background-color: rgba(17, 21, 24, 0.9);
 
-        transition: opacity var(--shift), visibility var(--shift);
-
+        transform: translateY(-100%);
+        transition: opacity 250ms ease, visibility 250ms ease, background-color 300ms ease, transform 300ms ease;
+       
+        @include mq(tab-only) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        
         &.is-open {
         opacity: 1;
         visibility: visible;
-        pointer-events: initial;  
+        pointer-events: initial;
+        transform: translateY(0);
         }
     }
 
@@ -45,49 +51,39 @@
     }
 
     &.is-open {
-        position: fixed;
-        top: 37px;
-        right: 20px;
         z-index: 1000;
-
-        @include mq(tab) {
-            top: 59px;
-            right: 40px;
-        }
     }
 }
 
 .menu-btn__icon-menu {
     stroke: #000;
+    opacity: 1;
+    transition: stroke var(--shift);
+
+    .header--no-transparency & {
+        stroke: var(--secondary-text-color);
+    }
+
+    .menu-btn.is-open & {
+        opacity: 0;
+    }
 }
 
 .menu-btn__icon-close {
     opacity: 0;
 
     .menu-btn.is-open & {
-        position: absolute;
-        top: 37px;
-        right: 20px;
-        z-index: 300;
         opacity: 1;
     }
 }
 
 .mob-menu__logo {
-    display: none;
+    opacity: 0;
+    transition: opacity 200ms ease 300ms;
     
     .mob-menu.is-open & {
-        position: absolute;
-        display: block;
-        top: 30px;
-        left: 20px;
-        z-index: 200;
+        opacity: 1;
         color: var(--secondary-text-color);
-
-        @include mq(tab-only) {
-            top: 42px;
-            left: 40px;
-        }
     }
 }
 
@@ -116,10 +112,6 @@
     }
 
     &:hover {
-        color: var(--accent-color);
-    }
-
-    &--current {
         color: var(--accent-color);
     }
 }

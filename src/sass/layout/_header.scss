@@ -1,15 +1,27 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: var(--secondary-background-color);
+
+    @include mq(tab-only) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &--no-transparency {
+        background-color: rgba(25, 28, 38, 0.4);
+        backdrop-filter: blur(6px);
+    }
 }
 
 .header__container {
     display: flex;
     align-items: center;
-    padding-top: 30px;
-
-    @include mq(tab) {
-        padding-top: 42px;
-    }
 }
 
 .header__button {
@@ -51,6 +63,10 @@
     
     color: var(--pimary-text-color);
     transition: color var(--shift);
+
+    .header--no-transparency & {
+        color: var(--secondary-text-color);
+    }
 
     &:hover,
     &:focus {
