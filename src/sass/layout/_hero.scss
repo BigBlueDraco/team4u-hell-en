@@ -1,13 +1,15 @@
 // ------------------ hero
 .hero {
-  padding: 30px 0 70px 0;
+  padding: 0 0 70px 0;
   background-color: transparent;
+  background-size: cover;
+  overflow: hidden;
 
   @include mq(tab) {
-    padding: 70px 0 70px 0;
+    padding: 0 0 70px 0;
   }
   @include mq(desk) {
-    padding: 30px 0 130px 0;
+    padding: 0 0 130px 0;
   }
 
   background-image: url(../images/hero/wave-bg-mobile.svg);
@@ -19,29 +21,29 @@
     background-position: 50% -70px;
   }
   @include mq(tab) {
-    background-position: 0 0;
+    background-position: 0 -80px;
     background-image: url(../images/hero/wave-bg.svg);
-    background-size: 100%;
   }
-
+  @media screen and (min-width: 850px) {
+    background-position: 0 110%;
+  }
+  @media screen and (min-width: 900px) {
+    background-position: 0 110%;
+  }
   @media screen and (min-width: 1000px) {
-    background-position: 0 100%;
+    background-position: 0 105%;
   }
 
   @media screen and (min-width: 1366px) {
-    background-position: 0 0;
-    background-size: 100%;
+    background-position: 0 -80px;
   }
   @media screen and (min-width: 1600px) {
-    background-position: 0 100%;
     background-position: 0 -90px;
   }
   @media screen and (min-width: 1800px) {
-    background-position: 0 100%;
     background-position: 0 -240px;
   }
   @media screen and (min-width: 1920px) {
-    background-position: 0 100%;
     background-position: 0 -240px;
   }
 }
@@ -132,10 +134,11 @@
 
 // ------------------------------button
 .hero__button {
+  margin: 0 auto;
   margin-bottom: 54px;
 
   @include mq(tab) {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
