@@ -56,6 +56,8 @@
 }
 
 .navigation__link {
+    display: inline-flex;
+    padding: 20px 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.21;
