@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" id="contacts">
   <div class="container">
     <h2 class="contacts__title">
       Registration for a <span class="contacts__accent">free</span> phone
@@ -21,7 +21,7 @@
           type="text"
           name="name"
           id="name"
-          placeholder="Name*"
+          placeholder="Name&ast;"
           required
           pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
           title="Username must be two words separated by space."
@@ -31,10 +31,10 @@
         <label class="form__label" for="number"></label>
         <input
           class="form__input form__input--last"
-          type="number"
+          type="tel"
           name="number"
           id="number"
-          placeholder="Phone*"
+          placeholder="Phone&ast;"
           required
           pattern="^[0-9]+$"
           title="The phone number must contain only numbers."
