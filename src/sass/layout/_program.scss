@@ -9,11 +9,12 @@
     background-color: var(--third-background-color);
 
     @include mq(mob-only) {
+        padding-bottom: 70px;
         &::after {
             content: '';
             position: absolute;
-            right: 0;
-            bottom: -97px;
+            left: calc(50% - 10px);
+            bottom: -20px;
 
             display: block;
             width: 120px;
@@ -35,7 +36,7 @@
         &::after {
         content: '';
         position: absolute;
-        right: 0;
+        left: calc(50% - 10px);
         bottom: 35px;
 
         display: block;
