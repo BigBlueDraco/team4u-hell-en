@@ -1,19 +1,20 @@
 .program {
     position: relative;
 
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 62px;
+    padding-bottom: 137px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--third-background-color);
 
     @include mq(mob-only) {
+        padding-bottom: 70px;
         &::after {
             content: '';
             position: absolute;
-            right: 0;
-            bottom: -97px;
+            left: calc(50% + 40px);
+            bottom: -20px;
 
             display: block;
             width: 120px;
@@ -35,8 +36,8 @@
         &::after {
         content: '';
         position: absolute;
-        right: 0;
-        bottom: -102px;
+        left: calc(50% + 10px);
+        bottom: 35px;
 
         display: block;
         width: 374px;
@@ -55,7 +56,7 @@
     @include mq(desk) {
         width: 1680px;
         padding-top: 120px;
-        padding-bottom: 326px;
+        padding-bottom: 130px;
 
         &::after {
             content: '';
@@ -239,13 +240,14 @@
 }
 
 .program__subject{
+    padding: 10px 0px;
     margin-bottom: 5px;
     
     font-weight: 700;
     color: var(--accent-color);
 
     @include mq(desk) {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
 
         font-size: 20px;
         line-height: calc(33 / 20);
@@ -253,6 +255,6 @@
     
 }
 
-.program_topic{
+.program__topic{
     opacity: 0.5;
 }
