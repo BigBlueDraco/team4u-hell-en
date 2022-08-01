@@ -26,6 +26,11 @@
 
 .header__button {
     display: none;
+    transition: var(--shift) background-color, var(--shift) color;
+    &:hover, &:focus{
+        background-color: var(--accent-color);
+        color: var(--secondary-text-color);
+    }
 
     @include mq(tab) {
         margin-left: 239px;
@@ -40,6 +45,7 @@
     @include mq(desk) {
         margin-left: 60px;
     }
+
 }
 
 .navigation {
