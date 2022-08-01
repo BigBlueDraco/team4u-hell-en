@@ -11,8 +11,14 @@
     gap: 15px;
     
     &__decor::after{
+        font-size: 14px;
         counter-increment: problems-list;                 
         content:  "\2014" '0'counter(problems-list);
+        @include mq(tab){
+        }
+        @include mq(desk){
+            font-size: 20px;
+        }
     }
 
     @include mq(tab) {
