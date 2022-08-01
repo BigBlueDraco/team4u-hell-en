@@ -72,6 +72,7 @@ main {
     font-size: 24px;
   }
   @include mq(desk) {
+    font-size: 46px;
     margin-bottom: 68px;
   }
   &__accent {

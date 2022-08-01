@@ -6,7 +6,7 @@
     z-index: 100;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: var(--secondary-background-color);
+    background-color: var(--primary-background-color);
 
     @include mq(tab-only) {
         padding-top: 40px;
