@@ -42,17 +42,18 @@
     }
 }
 
-.header__navigation {
-    margin-left: 144px;
-}
-
 .navigation {
     display: none;
 
     @include mq(desk) {
-        display: flex;
-        gap: 40px;
+        display: block;
+        margin-left: auto;
     }
+}
+
+.navigation__list {
+    display: flex;
+    gap: 40px;
 }
 
 .navigation__link {
