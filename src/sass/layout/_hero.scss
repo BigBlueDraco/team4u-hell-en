@@ -142,11 +142,6 @@
   @include mq(tab) {
     margin-bottom: 0;
   }
-
-  @include mq(desk){
-    padding-left: 70px;
-    padding-right: 70px;
-  }
 }
 
 // -------------------------------image
