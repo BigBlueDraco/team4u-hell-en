@@ -48,26 +48,36 @@
   &:before {
     content: '';
     position: absolute;
-    width: 22px;
-    height: 30px;
+
+    width: 15px;
+    height: 20px;
 
     background: url('../images/campfire.svg');
+    background-size: contain;
     left: 0;
     top: 0;
+    @include mq(desk) {
+      width: 22px;
+      height: 30px;
+    }
   }
 
   &:after {
     content: '';
     display: inline;
     width: 1px;
-    height: 68px;
     position: absolute;
-    bottom: -12px;
 
-    top: 36px;
-    left: 10px;
+    top: 27px;
+    bottom: -12px;
+    left: 7px;
 
     border-left: 1px dashed var(--pimary-text-color);
+    @include mq(desk) {
+      top: 36px;
+      bottom: -12px;
+      left: 10px;
+    }
   }
 
   &:last-child:after {
