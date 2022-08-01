@@ -54,7 +54,7 @@
     }
     
     @include mq(desk) {
-        width: 1680px;
+        max-width: 1680px;
         padding-top: 120px;
         padding-bottom: 130px;
 
