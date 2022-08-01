@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // скрипт для мобильного меню
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
@@ -64,3 +67,5 @@ function changeHeaderBackground() {
     body.classList.toggle("no-scroll");
     }); 
 }); 
+// Анімації
+AOS.init();
