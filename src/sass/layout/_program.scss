@@ -55,7 +55,7 @@
     @include mq(desk) {
         width: 1680px;
         padding-top: 120px;
-        padding-bottom: 326px;
+        padding-bottom: 130px;
 
         &::after {
             content: '';
