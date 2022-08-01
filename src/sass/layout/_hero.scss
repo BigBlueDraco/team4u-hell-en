@@ -133,9 +133,19 @@
 // ------------------------------button
 .hero__button {
   margin-bottom: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 260px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   @include mq(tab) {
     margin-bottom: 0;
+  }
+
+  @include mq(desk){
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
