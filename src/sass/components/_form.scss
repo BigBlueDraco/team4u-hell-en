@@ -14,6 +14,7 @@
   background-color: transparent;
   cursor: pointer;
   border: 1px solid var(--secondary-text-color);
+  transition: var(--shift);
 
   @include mq(tab) {
     width: 390px;
@@ -58,6 +59,10 @@
   }
 }
 
-// .form__input:invalid {
-//   border-color: red;
-// }
+.form__input:required:invalid:not(:placeholder-shown) {
+  border-color: var(--invalid-color);
+}
+
+.form__input:required:valid:not(:placeholder-shown) {
+  border-color: var(--valid-color);
+}
