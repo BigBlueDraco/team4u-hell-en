@@ -11,11 +11,12 @@
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
     mobileMenuRef.classList.toggle("is-open");
-    body.classList.toggle("no-scroll");
     if (!expanded) {
       const header = document.getElementById("header");
+      body.classList.add("no-scroll");
       header.classList.remove("header--no-transparency");
     } else {
+      body.classList.remove("no-scroll");
       setTimeout(() => {
         changeHeaderBackground();
       },50);
@@ -24,8 +25,7 @@
 
   const linkBtnRef = document.querySelector(".mob-menu__link");
   linkBtnRef.addEventListener("click", () => {
-    const body = document.querySelector("#page");
-    body.classList.toggle("no-scroll");
+    body.classList.remove("no-scroll");
   });
 })();
 
@@ -51,6 +51,7 @@ function changeHeaderBackground() {
         var id  = $(this).attr('href'), 
             top = $(id).offset().top; 
       $('body,html').animate({ scrollTop: top }, 1500);
+      if (document.documentElement.clientWidth >= 1366) return;
       const menuBtnRef = document.querySelector("[data-menu-button]");
       const mobileMenuRef = document.querySelector("[data-menu]");
       const body = document.querySelector("#page");
@@ -61,6 +62,6 @@ function changeHeaderBackground() {
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
     mobileMenuRef.classList.toggle("is-open");
-    body.classList.toggle("no-scroll");
+    body.classList.remove("no-scroll");
     }); 
 }); 
