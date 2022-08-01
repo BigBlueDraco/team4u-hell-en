@@ -67,9 +67,9 @@ main {
 .title--dark-theme {
   color: var(--secondary-text-color);
   margin-bottom: 25px;
+  font-size: 24px;
   @include mq(tab) {
     margin-bottom: 30px;
-    font-size: 24px;
   }
   @include mq(desk) {
     font-size: 46px;
