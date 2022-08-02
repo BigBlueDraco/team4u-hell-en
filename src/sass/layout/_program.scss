@@ -84,16 +84,31 @@
 .program__title {
     text-align: left;
     color: var(--secondary-text-color);
+    font-style: normal;
 
     @include mq(mob-only) {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 130%;
+
         margin-bottom: 30px;
     }
 
     @include mq(tab-only) {
+
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 130%;
+
         margin-bottom: 52px;
     }
 
     @include mq(desk) {
+
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 130%;
+
         margin-bottom: 106px;
     }
 }
@@ -117,7 +132,7 @@
             position: absolute;
             top: 238px;
             left: 0;
-            transform: translateY(-40px);
+            transform: translateY(-2px);
     
             display: inline-block;
             width: 100%;
