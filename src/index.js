@@ -30,6 +30,13 @@ import 'aos/dist/aos.css';
   linkBtnRef.addEventListener("click", () => {
     body.classList.remove("no-scroll");
   });
+
+  const linkBtnLogo = document.querySelector(".logo");
+  linkBtnLogo.addEventListener("click", () => {
+$("html, body").animate({ 
+      scrollTop:0 
+    },1000);
+  });
 })();
 
 //  скрипт для фиксированного полупрозрачного хедера
@@ -54,6 +61,7 @@ function changeHeaderBackground() {
         var id  = $(this).attr('href'), 
             top = $(id).offset().top; 
       $('body,html').animate({ scrollTop: top }, 1500);
+       window.location.hash = id;
       if (document.documentElement.clientWidth >= 1366) return;
       const menuBtnRef = document.querySelector("[data-menu-button]");
       const mobileMenuRef = document.querySelector("[data-menu]");
@@ -67,6 +75,7 @@ function changeHeaderBackground() {
     mobileMenuRef.classList.toggle("is-open");
     body.classList.remove("no-scroll");
     }); 
-}); 
+ }); 
+
 // Анімації
 AOS.init();
