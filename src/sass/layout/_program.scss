@@ -168,6 +168,9 @@
     }
 
     @include mq(tab-only) {
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 130%;
         &:not(:last-child) {
             margin-bottom: 30px;
         }
