@@ -42,6 +42,7 @@ $("html, body").animate({
 //  скрипт для фиксированного полупрозрачного хедера
 window.onscroll = () => changeHeaderBackground();
 
+
 function changeHeaderBackground() {
   const header = document.getElementById("header");
   const headerOffsetTrigger = header.offsetTop;
